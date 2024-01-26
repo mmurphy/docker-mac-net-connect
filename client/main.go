@@ -126,7 +126,7 @@ func main() {
 		os.Exit(ExitSetupFailed)
 	}
 
-	ips, err := net.LookupIP("host.docker.internal")
+	ips, err := net.LookupIP("host.containers.internal")
 	if err != nil || len(ips) == 0 {
 		fmt.Printf("Failed to lookup IP: %v\n", err)
 		os.Exit(ExitSetupFailed)
